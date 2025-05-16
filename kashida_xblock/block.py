@@ -14,6 +14,10 @@ class KashidaXBlock(XBlock):
     def resource_string(self, path):
         data = pkg_resources.resource_string(__name__, path)
         return data.decode("utf8")
+    def studio_view(self, context=None):
+        html = self.resource_string("templates/html/kashida_edit.html")
+        frag = Fragment(html)
+        return frag
 
     def student_view(self, context=None):
         html = self.resource_string("templates/html/kashida_edit.html")
