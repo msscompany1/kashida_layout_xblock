@@ -123,6 +123,7 @@ setup(
     install_requires=load_requirements('requirements/base.in'),
     install_requires=[
         'XBlock',
+        'ckeditor-cloud-services>=1.0.0',  # Add CKEditor dependency
     ],
     entry_points={
         'xblock.v1': [
